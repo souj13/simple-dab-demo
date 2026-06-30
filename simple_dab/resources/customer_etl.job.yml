@@ -1,0 +1,27 @@
+resources:
+  jobs:
+    customer_etl:
+
+      name: Customer ETL
+
+      email_notifications:
+        on_success:
+          - jambalesourabh13@gmail.com
+
+      parameters:
+        - name: catalog
+          default: ${var.catalog}
+
+        - name: schema
+          default: ${var.schema}
+
+      tasks:
+        - task_key: customer_etl
+
+          notebook_task:
+            notebook_path: ../src/customer_etl.py
+
+      environments:
+        - environment_key: default
+          spec:
+            environment_version: "4"
