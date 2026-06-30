@@ -2,7 +2,7 @@ resources:
   jobs:
     customer_etl:
 
-      name: Customer ETL
+      name: Customer ETL v2
 
       email_notifications:
         on_success:
